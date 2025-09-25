@@ -1,0 +1,13 @@
+
+.idea/
+.venv/
+.venv1/
+wandb/
+.vscode/
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+your_output_dir

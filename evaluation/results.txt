@@ -1,0 +1,172 @@
+                           split    model  accuracy  f1_macro  precision_macro  recall_macro
+                            HANS     base  0.624000  0.568584         0.755040      0.624000
+                            HANS debiased  0.643933  0.596079         0.773583      0.643933
+             Negated Dev Matched     base  0.499074  0.445811         0.484545      0.494961
+             Negated Dev Matched debiased  0.488058  0.432749         0.451695      0.485892
+          Negated Dev Mismatched     base  0.500203  0.446546         0.487534      0.496044
+          Negated Dev Mismatched debiased  0.488812  0.434495         0.458764      0.486798
+  Combined Augmented Transformed     base  0.345679  0.173160         0.117057      0.332542
+  Combined Augmented Transformed debiased  0.345679  0.173913         0.117746      0.332542
+Passivized Augmented Transformed     base  0.505350  0.225769         0.501650      0.333897
+Passivized Augmented Transformed debiased  0.503704  0.223684         0.168456      0.332790
+  Inverted Augmented Transformed     base  0.000000  0.000000         0.000000      0.000000
+  Inverted Augmented Transformed debiased  0.000823  0.000548         0.333333      0.000274
+     Combined Augmented Original     base  0.688889  0.728104         0.781015      0.767638
+     Combined Augmented Original debiased  0.688889  0.722642         0.768093      0.764652
+   Passivized Augmented Original     base  0.936626  0.935549         0.936742      0.934981
+   Passivized Augmented Original debiased  0.901235  0.900076         0.900996      0.899521
+     Inverted Augmented Original     base  0.038683  0.024828         0.333333      0.012894
+     Inverted Augmented Original debiased  0.091358  0.055807         0.333333      0.030453
+  Weighted Negated + Transformed     base  0.465698  0.396953         0.442070      0.452541
+  Weighted Negated + Transformed debiased  0.456211  0.386332         0.416156      0.444778
+     Weighted Negated + Original     base  0.508301  0.464514         0.517114      0.507503
+     Weighted Negated + Original debiased  0.499763  0.453412         0.488607      0.498690
+
+
+Confusion matrices (rows=true, cols=pred):
+
+[HANS] - base
+                ENTAILMENT  NON-ENTAILMENT
+true                                      
+ENTAILMENT           14736             264
+NON-ENTAILMENT       11016            3984
+
+[HANS] - debiased
+                ENTAILMENT  NON-ENTAILMENT
+true                                      
+ENTAILMENT           14822             178
+NON-ENTAILMENT       10504            4496
+
+[Negated Dev Matched] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            345     1400           1434
+NEUTRAL                85     2078            931
+CONTRADICTION         342      674           2425
+
+[Negated Dev Matched] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            280     1261           1638
+NEUTRAL                63     2245            786
+CONTRADICTION         450      775           2216
+
+[Negated Dev Mismatched] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            351     1299           1590
+NEUTRAL                88     1979           1062
+CONTRADICTION         342      533           2588
+
+[Negated Dev Mismatched] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            291     1184           1765
+NEUTRAL                70     2167            892
+CONTRADICTION         423      692           2348
+
+[Combined Augmented Transformed] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            420        0              1
+NEUTRAL               776        0             18
+CONTRADICTION           0        0              0
+
+[Combined Augmented Transformed] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            420        0              1
+NEUTRAL               769        0             25
+CONTRADICTION           0        0              0
+
+[Passivized Augmented Transformed] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            612        0              1
+NEUTRAL               600        2              0
+CONTRADICTION           0        0              0
+
+[Passivized Augmented Transformed] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            612        0              1
+NEUTRAL               599        0              3
+CONTRADICTION           0        0              0
+
+[Combined Augmented Original] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            328       22              1
+NEUTRAL               328      269              7
+CONTRADICTION           5       15            240
+
+[Combined Augmented Original] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            326       20              5
+NEUTRAL               314      274             16
+CONTRADICTION           6       17            237
+
+[Passivized Augmented Original] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            472       21              7
+NEUTRAL                14      361              7
+CONTRADICTION          10       18            305
+
+[Passivized Augmented Original] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT            457       33             10
+NEUTRAL                26      341             15
+CONTRADICTION          14       22            297
+
+[Inverted Augmented Original] - base
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT              0        0              0
+NEUTRAL              1148       47             20
+CONTRADICTION           0        0              0
+
+[Inverted Augmented Original] - debiased
+               ENTAILMENT  NEUTRAL  CONTRADICTION
+true                                             
+ENTAILMENT              0        0              0
+NEUTRAL              1071      111             33
+CONTRADICTION           0        0              0
+
+Label distributions (lowercased):
+
+[Negated Dev Matched] n=9714
+  entailment: 3179
+  neutral: 3094
+  contradiction: 3441
+
+[Negated Dev Mismatched] n=9832
+  entailment: 3240
+  neutral: 3129
+  contradiction: 3463
+
+[Combined Augmented Transformed] n=1215
+  entailment: 421
+  neutral: 794
+
+[Passivized Augmented Transformed] n=1215
+  entailment: 613
+  neutral: 602
+
+[Inverted Augmented Transformed] n=1215
+  neutral: 1215
+
+[Combined Augmented Original] n=1215
+  entailment: 351
+  neutral: 604
+  contradiction: 260
+
+[Passivized Augmented Original] n=1215
+  entailment: 500
+  neutral: 382
+  contradiction: 333
+
+[Inverted Augmented Original] n=1215
+  neutral: 1215
